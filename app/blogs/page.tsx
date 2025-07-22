@@ -258,14 +258,14 @@ export default function BlogsPage() {
                         <span>{featuredPost.readTime}</span>
                       </div>
                       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-                        <Button
+                        {/* <Button
                           asChild
                           className="bg-[#093257] hover:bg-[#0a4a73] text-white w-fit shadow-lg hover:shadow-xl transition-all duration-300"
                         >
                           <Link href={`/blogs/${featuredPost.id}`}>
                             Read Full Article <ArrowRight className="ml-2 w-4 h-4" />
                           </Link>
-                        </Button>
+                        </Button> */}
                       </motion.div>
                     </CardContent>
                   </div>
@@ -276,98 +276,7 @@ export default function BlogsPage() {
         </section>
 
         {/* Latest Articles */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <motion.div
-                className="text-center mb-12"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Latest Articles</h2>
-                <p className="text-lg text-gray-600">Fresh insights and expert analysis from our team</p>
-              </motion.div>
-
-              <motion.div
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
-              >
-                {latestPosts.map((post, index) => (
-                  <motion.div key={post.id} variants={cardVariants}>
-                    <motion.div whileHover={{ y: -8, scale: 1.02 }} transition={{ type: "spring", stiffness: 300 }}>
-                      <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 border-0 shadow-lg h-full">
-                        <div className="relative h-48">
-                          <Image
-                            src={post.image || "/placeholder.svg"}
-                            alt={post.title}
-                            fill
-                            className="object-cover"
-                            sizes="400px"
-                          />
-                          <div className="absolute inset-0 bg-black/10"></div>
-                        </div>
-                        <CardContent className="p-6 flex flex-col h-full">
-                          <Badge variant="outline" className="w-fit mb-3 border-[#093257] text-[#093257]">
-                            {post.category}
-                          </Badge>
-                          <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 flex-1">{post.title}</h3>
-                          <p className="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">{post.excerpt}</p>
-                          <div className="flex items-center gap-3 text-xs text-gray-500 mb-4">
-                            <div className="flex items-center gap-1">
-                              <User className="w-3 h-3" />
-                              <span>{post.author}</span>
-                            </div>
-                            <div className="flex items-center gap-1">
-                              <Calendar className="w-3 h-3" />
-                              <span>{post.date}</span>
-                            </div>
-                            <span>{post.readTime}</span>
-                          </div>
-                          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-                            <Button
-                              asChild
-                              variant="outline"
-                              size="sm"
-                              className="w-full bg-transparent border-[#093257] text-[#093257] hover:bg-[#093257] hover:text-white transition-all duration-300"
-                            >
-                              <Link href={`/blogs/${post.id}`}>
-                                Read More <ArrowRight className="ml-2 w-3 h-3" />
-                              </Link>
-                            </Button>
-                          </motion.div>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
-                  </motion.div>
-                ))}
-              </motion.div>
-
-              {/* View All Articles Button */}
-              <motion.div
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.98 }}>
-                  <Button
-                    asChild
-                    size="lg"
-                    className="bg-[#093257] hover:bg-[#0a4a73] text-white font-semibold px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300"
-                  >
-                    <Link href="/blogs/archive">View All Articles</Link>
-                  </Button>
-                </motion.div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Newsletter Signup */}
         <section className="py-16 bg-white">

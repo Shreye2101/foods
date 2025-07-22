@@ -7,74 +7,139 @@ import { ProductCard } from "@/components/ui/product-card"
 
 const seedsProducts = [
   {
-    id: "pumpkin-seeds",
-    name: "Pumpkin Seeds",
-    description: "Nutritious pumpkin seeds with delicious nutty flavor and crunch",
-    varieties: ["Raw", "Roasted", "Salted", "Organic"],
-    benefits: ["Magnesium Rich", "Heart Healthy", "Immune Support"],
-    moq: "50kg",
-    rating: 4.7,
-    price: "From $6.80/kg",
-    category: "seeds",
-    image: "/images/products/pumpkin-seeds.jpg",
-  },
-  {
-    id: "mixed-seeds",
-    name: "Mixed Seeds Blend",
-    description: "Premium blend of various seeds including pumpkin, sunflower, flax, and chia seeds",
-    varieties: ["Raw Mix", "Roasted Mix", "Organic Mix", "Custom Blend"],
-    benefits: ["Complete Nutrition", "Omega-3 Rich", "High Protein"],
-    moq: "25kg",
-    rating: 4.8,
-    price: "From $7.50/kg",
-    category: "seeds",
-    image: "/images/products/mixed-seeds.jpg",
-  },
-  {
     id: "chia-seeds",
     name: "Chia Seeds",
-    description: "Superfood seeds packed with omega-3, fiber, and complete protein",
-    varieties: ["Black", "White", "Organic", "Conventional"],
-    benefits: ["Omega-3 Rich", "High Fiber", "Complete Protein"],
+    description: "Premium chia seeds, excellent for health and various culinary uses.",
+    varieties: ["Black", "White", "Organic"], // Inferred
+    benefits: ["Omega-3 Rich", "High Fiber", "Antioxidants"], // Inferred
     moq: "25kg",
-    rating: 4.9,
-    price: "From $7.20/kg",
+    rating: 4.8, // Inferred
+    price: "From $7.20/kg", // Inferred
     category: "seeds",
+    image: "/images/products/chia seeds.jpg",
+    origin: "MP, Karnataka",
+    purity: "99.99%",
+    colour: ["Black", "White"],
+    clean: "Double sortex",
+    packing: "25Kg, 50Kg",
   },
   {
     id: "flax-seeds",
-    name: "Flax Seeds",
-    description: "Golden and brown flax seeds rich in lignans and omega-3 fatty acids",
-    varieties: ["Golden", "Brown", "Ground", "Organic"],
-    benefits: ["Omega-3 ALA", "Lignans", "Digestive Health"],
+    name: "Flax Seeds (Alsi Beej)",
+    description: "High-quality flax seeds, known for their nutritional benefits and versatility.",
+    varieties: ["Regular", "Bold", "Organic", "Ground"], // Inferred
+    benefits: ["Omega-3 ALA", "Digestive Health", "Lignans"], // Inferred
     moq: "25kg",
-    rating: 4.8,
-    price: "From $5.40/kg",
+    rating: 4.7, // Inferred
+    price: "From $5.40/kg", // Inferred
     category: "seeds",
+    image: "/images/products/flax-seeds.jpg",
+    origin: "MP, Rajasthan",
+    purity: "99.99%",
+    size: ["Regular", "Bold"],
+    clean: "Double sortex",
+    packing: "25Kg, 50Kg",
+  },
+  {
+    id: "pumpkin-seeds",
+    name: "Pumpkin Seeds",
+    description: "Nutritious pumpkin seeds with a delicious nutty flavor and crunch.",
+    varieties: ["AA", "AAA", "Raw", "Roasted"], // Inferred
+    benefits: ["Magnesium Rich", "Zinc Source", "Antioxidants"], // Inferred
+    moq: "25kg",
+    rating: 4.6, // Inferred
+    price: "From $6.80/kg", // Inferred
+    category: "seeds",
+    image: "/images/products/pumpkin-seeds.jpg",
+    origin: "China",
+    type: ["AA", "AAA"],
+    clean: "100% clean",
+    packing: "25Kg Carton box",
   },
   {
     id: "sunflower-seeds",
     name: "Sunflower Seeds",
-    description: "Premium sunflower seeds perfect for snacking and food manufacturing",
-    varieties: ["Raw", "Roasted", "Salted", "Kernels"],
-    benefits: ["Vitamin E Rich", "Healthy Fats", "Antioxidants"],
-    moq: "50kg",
-    rating: 4.6,
-    price: "From $4.20/kg",
+    description: "Premium sunflower seeds perfect for snacking and food manufacturing.",
+    varieties: ["Confectionery grade", "Raw", "Roasted", "Kernels"], // Inferred
+    benefits: ["Vitamin E Rich", "Healthy Fats", "Antioxidants"], // Inferred
+    moq: "25kg",
+    rating: 4.5, // Inferred
+    price: "From $4.20/kg", // Inferred
     category: "seeds",
+    image: "/images/products/sunflower-seeds.jpg",
+    origin: "China",
+    type: "Confectionery grade",
+    clean: "100% clean",
+    packing: "25Kg Carton box",
+  },
+  {
+    id: "quinoa-seeds",
+    name: "Quinoa Seeds",
+    description: "Healthy quinoa seeds, a complete protein source with versatile uses.",
+    varieties: ["White", "Red", "Organic"], // Inferred
+    benefits: ["Complete Protein", "High Fiber", "Iron Rich"], // Inferred
+    moq: "25kg",
+    rating: 4.7, // Inferred
+    price: "From $8.50/kg", // Inferred
+    category: "seeds",
+    image: "/images/products/quinoa-seeds.jpg",
+    origin: "MP, Rajasthan",
+    purity: "99.99%, 100%",
+    colour: ["White", "Red"],
+    size: ["Regular", "Bold"],
+    packing: "25Kg, 50Kg",
+  },
+  {
+    id: "basil-seeds",
+    name: "Basil Seeds (Tulsi Beej)",
+    description: "Cooling and healthful basil seeds, ideal for beverages and desserts.",
+    varieties: ["Black", "Organic"], // Inferred
+    benefits: ["Cooling Properties", "Fiber Rich", "Detoxifying"], // Inferred
+    moq: "25kg",
+    rating: 4.6, // Inferred
+    price: "From $9.00/kg", // Inferred
+    category: "seeds",
+    image: "/images/products/basil.webp",
+    origin: "India, Afghanistan",
+    purity: "99.99%, 100%",
+    colour: "Black",
+    size: "Regular",
+    packing: "25Kg, 50Kg",
+  },
+  {
+    id: "watermelon-seeds",
+    name: "Watermelon Seeds",
+    description: "Nutrient-rich watermelon seeds, great for snacking and health.",
+    varieties: ["Sadir", "Tumba", "Regular", "Jumbo"], // Inferred
+    benefits: ["Protein Source", "Magnesium Rich", "Healthy Fats"], // Inferred
+    moq: "25kg",
+    rating: 4.5, // Inferred
+    price: "From $5.80/kg", // Inferred
+    category: "seeds",
+    image: "/images/products/watermelon.jpg",
+    origin: "Sudan, India",
+    variety: ["Sadir", "Tumba"],
+    size: ["Regular", "Jumbo"],
+    packing: "25Kg, 50Kg",
   },
   {
     id: "sesame-seeds",
     name: "Sesame Seeds",
-    description: "High-quality sesame seeds with rich flavor and nutritional benefits",
-    varieties: ["White", "Black", "Hulled", "Organic"],
-    benefits: ["Calcium Rich", "Healthy Oils", "Protein Source"],
+    description: "High-quality sesame seeds with rich flavor and nutritional benefits.",
+    varieties: ["White", "Black", "Hulled", "Un-hulled"], // Inferred
+    benefits: ["Calcium Rich", "Healthy Oils", "Protein Source"], // Inferred
     moq: "25kg",
-    rating: 4.5,
-    price: "From $3.90/kg",
+    rating: 4.7, // Inferred
+    price: "From $3.90/kg", // Inferred
     category: "seeds",
+    image: "/images/products/saseme.jpg",
+    origin: "Gujarat, RJ, UP, MP",
+    purity: "99.99%, 100%",
+    colour: ["White", "Black"],
+    size: ["Regular", "Bold"],
+    packing: "25Kg, 50Kg",
   },
-]
+];
 
 export default function SeedsPage() {
   return (

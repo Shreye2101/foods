@@ -24,15 +24,15 @@ export function QuoteModal({ children, triggerClassName }: QuoteModalProps) {
       <DialogTrigger asChild className={triggerClassName}>
         {children}
       </DialogTrigger>
-      <DialogContent className="w-[95vw] max-w-md max-h-[90vh] overflow-y-auto p-0">
+      <DialogContent className="w-[95vw] max-w-md max-h-[90vh] overflow-y-auto p-0 bg-white">
         <DialogHeader className="p-6 pb-4 border-b">
           <DialogTitle className="text-xl font-bold text-gray-900 pr-8">Submit Quote Request</DialogTitle>
-          <button
+          {/* <button
             onClick={() => setOpen(false)}
             className="absolute right-4 top-4 p-2 hover:bg-gray-100 rounded-full transition-colors"
           >
             <X className="w-4 h-4" />
-          </button>
+          </button> */}
         </DialogHeader>
 
         <form className="p-6 space-y-4">

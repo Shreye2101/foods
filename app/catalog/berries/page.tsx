@@ -7,75 +7,128 @@ import { ProductCard } from "@/components/ui/product-card"
 
 const berriesProducts = [
   {
-    id: "dried-berries-mix",
-    name: "Mixed Dried Berries",
-    description: "Premium blend of dried cranberries, blueberries, and other antioxidant-rich berries",
-    varieties: ["Mixed Berry", "Cranberry Blend", "Antioxidant Mix", "Organic"],
-    benefits: ["Antioxidant Rich", "Natural Sweetness", "Immune Support"],
-    moq: "25kg",
-    rating: 4.8,
-    price: "From $11.90/kg",
+    id: "dried-cranberry",
+    name: "Dried Cranberry",
+    description: "Sweet and tart dried cranberries, perfect for snacks, baking, and cereals.",
+    varieties: ["Whole", "Sliced", "Sweetened", "Unsweetened"], // Inferred varieties
+    benefits: ["Rich in Antioxidants", "Urinary Tract Health", "High in Fiber"], // Inferred benefits
+    moq: "11.34kg",
+    rating: 4.7, // Inferred rating
+    price: "From $9.50/kg", // Inferred price
     category: "berries",
-    image: "/images/products/dried-berries.jpg",
+    image: "/images/products/cannberries.jpg",
+    origin: "USA, Canada",
+    type: ["Whole", "Sliced"],
+    packing: "11.34 Kg carton",
   },
   {
-    id: "dried-blueberries",
-    name: "Dried Blueberries",
-    description: "Premium dried blueberries bursting with natural sweetness and antioxidants",
-    varieties: ["Sweetened", "Unsweetened", "Freeze Dried", "Organic"],
-    benefits: ["Antioxidant Powerhouse", "Brain Health", "Natural Sweetness"],
-    moq: "25kg",
-    rating: 4.9,
-    price: "From $12.40/kg",
+    id: "dried-blueberry",
+    name: "Dried Blueberry",
+    description: "Plump and flavorful dried blueberries, packed with natural goodness.",
+    varieties: ["Sweetened", "Unsweetened", "Organic"], // Inferred varieties
+    benefits: ["Antioxidant Powerhouse", "Brain Health", "Eye Health"], // Inferred benefits
+    moq: "1kg pouch in 10kg box",
+    rating: 4.8, // Inferred rating
+    price: "From $12.00/kg", // Inferred price
     category: "berries",
     image: "/images/products/blueberries.jpg",
+    origin: "USA, Canada, China",
+    packing: "1 Kg pouch in 10kg box",
+  },
+  {
+    id: "turkish-apricot",
+    name: "Turkish Apricot",
+    description: "Sun-dried Turkish apricots, naturally sweet and chewy, ideal for snacking and cooking.",
+    varieties: ["Size 0,1, 2,3"], // Inferred varieties
+    benefits: ["Rich in Vitamin A", "High in Fiber", "Potassium Source"], // Inferred benefits
+    moq: "12.5kg",
+    rating: 4.6, // Inferred rating
+    price: "From $6.50/kg", // Inferred price
+    category: "dried-fruits",
+    image: "/images/products/turkish-apricots.jpg",
+    origin: "Turkey",
+    size: ["Size 0,1", "2,3"],
+    packing: "12.5 Kg carton box",
+  },
+  {
+    id: "dried-prunes",
+    name: "Dried Prunes",
+    description: "Sweet and succulent dried prunes, known for their digestive benefits.",
+    varieties: ["30/40", "40/50", "50/60"], // Inferred varieties
+    benefits: ["Digestive Health", "High in Fiber", "Bone Health"], // Inferred benefits
+    moq: "11.34kg",
+    rating: 4.7, // Inferred rating
+    price: "From $5.80/kg", // Inferred price
+    category: "dried-fruits",
+    image: "/images/products/prunes.jpg",
+    origin: "USA, Chile, Argentina",
+    size: ["30/40", "40/50", "50/60"],
+    packing: "11.34 Kg, 12.5 Kg box",
+  },
+  {
+    id: "dried-mango",
+    name: "Dried Mango",
+    description: "Chewy and naturally sweet dried mango pieces, a tropical delight.",
+    varieties: ["Low sugar", "High sugar", "Diced", "Sliced", "Cube"], // Inferred varieties
+    benefits: ["Rich in Vitamin C", "Good for Digestion", "Immune Support"], // Inferred benefits
+    moq: "1kg pouch in 10kg box",
+    rating: 4.8, // Inferred rating
+    price: "From $8.00/kg", // Inferred price
+    category: "dried-fruits",
+    image: "/images/products/dried-mango.avif",
+    origin: "India, Thailand",
+    type: ["Low sugar", "High sugar"],
+    shape: ["Diced", "sliced", "cube"],
+    packing: "1 Kg pouch in 10kg box",
   },
   {
     id: "dried-kiwi",
-    name: "Dried Kiwi Slices",
-    description: "Sweet and tangy dried kiwi slices with vibrant color and tropical flavor",
-    varieties: ["Natural", "Sweetened", "Freeze Dried", "Organic"],
-    benefits: ["Vitamin C Rich", "Digestive Health", "Natural Enzymes"],
-    moq: "25kg",
-    rating: 4.6,
-    price: "From $16.80/kg",
-    category: "berries",
+    name: "Dried Kiwi",
+    description: "Vibrant green dried kiwi slices, offering a tangy and sweet flavor.",
+    varieties: ["Sliced", "Diced", "Sweetened"], // Inferred varieties
+    benefits: ["High in Vitamin C", "Fiber Rich", "Antioxidants"], // Inferred benefits
+    moq: "1kg pouch in 10kg box",
+    rating: 4.7, // Inferred rating
+    price: "From $9.00/kg", // Inferred price
+    category: "dried-fruits",
     image: "/images/products/dried-kiwi.jpg",
+    origin: "Thailand, India, China",
+    shape: ["Sliced", "Diced"],
+    packing: "1 Kg pouch in 10kg box",
   },
   {
-    id: "dried-cranberries",
-    name: "Dried Cranberries",
-    description: "Sweet-tart dried cranberries perfect for baking, snacking, and food manufacturing",
-    varieties: ["Sweetened", "Unsweetened", "Organic", "Juice Infused"],
-    benefits: ["Antioxidant Rich", "Urinary Health", "Natural Flavor"],
-    moq: "50kg",
-    rating: 4.8,
-    price: "From $8.90/kg",
-    category: "berries",
+    id: "dried-papaya",
+    name: "Dried Papaya",
+    description: "Sweet and tender dried papaya pieces, a delightful tropical snack.",
+    varieties: ["Low sugar", "High sugar", "Diced", "Sliced"], // Inferred varieties
+    benefits: ["Digestive Enzymes", "Vitamin C Source", "Antioxidant Support"], // Inferred benefits
+    moq: "1kg pouch in 10kg box",
+    rating: 4.5, // Inferred rating
+    price: "From $7.00/kg", // Inferred price
+    category: "dried-fruits",
+    image: "/images/products/dried-papaya.avif",
+    origin: "India, Thailand",
+    shape: ["Diced", "Sliced"],
+    type: ["Low sugar", "High sugar"],
+    packing: "1 Kg pouch in 10kg box",
   },
   {
-    id: "goji-berries",
-    name: "Goji Berries",
-    description: "Superfood goji berries with exceptional nutritional profile and antioxidants",
-    varieties: ["Tibetan", "Ningxia", "Organic", "Premium Grade"],
-    benefits: ["Superfood Status", "Immune Support", "Anti-Aging"],
-    moq: "25kg",
-    rating: 4.7,
-    price: "From $18.50/kg",
-    category: "berries",
+    id: "dried-pineapple",
+    name: "Dried Pineapple",
+    description: "Chewy and tangy dried pineapple rings, a sweet and tropical treat.",
+    varieties: ["Sliced", "Coin", "Low sugar", "High sugar"], // Inferred varieties
+    benefits: ["Rich in Vitamin C", "Bromelain Source", "Digestive Aid"], // Inferred benefits
+    moq: "1kg pouch in 10kg box",
+    rating: 4.6, // Inferred rating
+    price: "From $7.50/kg", // Inferred price
+    category: "dried-fruits",
+    image: "/images/products/dried-pineapple.webp",
+    origin: "India, Thailand",
+    shape: ["Sliced", "Coin"],
+    type: ["Low sugar", "High sugar"],
+    packing: "1 Kg pouch in 10kg box",
   },
-  {
-    id: "dried-strawberries",
-    name: "Dried Strawberries",
-    description: "Sweet dried strawberries with concentrated flavor and vibrant color",
-    varieties: ["Sliced", "Whole", "Freeze Dried", "Organic"],
-    benefits: ["Vitamin C", "Natural Sweetness", "Versatile Use"],
-    moq: "25kg",
-    rating: 4.5,
-    price: "From $14.20/kg",
-    category: "berries",
-  },
-]
+];
 
 export default function BerriesPage() {
   return (

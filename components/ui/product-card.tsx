@@ -17,13 +17,24 @@ interface ProductCardProps {
     moq: string
     rating: number
     price: string
-    category: string
+    category: string // Ensure category is always present
     image?: string
   }
   className?: string
 }
 
 export function ProductCard({ product, className = "" }: ProductCardProps) {
+  // Determine the base path for the product detail page based on its category
+  let productDetailBasePath = "";
+  if (product.category === "seeds") {
+    productDetailBasePath = "/catalog/seeds";
+  } else if (product.category === "berries" || product.category === "dried-fruits") {
+    productDetailBasePath = "/catalog/berries";
+  } else {
+    // Default for nuts, dry-fruits, dates (all go to the nuts detail page)
+    productDetailBasePath = "/catalog/nuts";
+  }
+
   return (
     <Card
       className={`flex-shrink-0 w-80 hover:shadow-xl transition-all duration-300 border-0 shadow-md snap-start group hover:scale-[1.02] overflow-hidden ${className}`}
@@ -38,6 +49,9 @@ export function ProductCard({ product, className = "" }: ProductCardProps) {
               fill
               className="object-cover"
               sizes="320px"
+              onError={(e) => {
+                e.currentTarget.src = "https://placehold.co/320x192/E0E0E0/616161?text=Image+Not+Found"; // Fallback image
+              }}
             />
             <div className="absolute inset-0 bg-black/10"></div>
             <div className="absolute top-3 right-3 flex items-center gap-1 bg-white/90 backdrop-blur-sm rounded-full px-2 py-1">
@@ -108,7 +122,7 @@ export function ProductCard({ product, className = "" }: ProductCardProps) {
               size="sm"
               className="bg-[#093257] hover:bg-[#0a4a73] text-white font-medium hover:scale-105 transition-all"
             >
-              <Link href={`/catalog/${product.category}/${product.id}`}>View Details</Link>
+              <Link href={`${productDetailBasePath}/${product.id}`}>View Details</Link>
             </Button>
           </div>
         </div>

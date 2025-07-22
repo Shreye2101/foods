@@ -11,6 +11,8 @@ import {
   SidebarMenuItem,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import { QuoteModal } from "@/components/ui/quote-modal"
+
 import { Home, Package, DollarSign, HelpCircle, Mail, Info, FileText, Users, Rss } from "lucide-react"
 
 const navigationItems = [
@@ -31,10 +33,11 @@ const sidebarItems = [
 
 export function AppSidebar() {
   return (
-    <Sidebar side="right" variant="sidebar" className="border-l border-gray-200 bg-white">
+    <Sidebar side="right" variant="sidebar" className="border-l border-gray-200 bg-white"
+     >
       <SidebarHeader className="border-b border-gray-100 bg-white p-6">
         <div className="flex items-center gap-3">
-          <div className="relative w-24 h-16">
+          <div className="relative w-12 h-8">
             {/* Increased size significantly */}
             <Image src="/images/logo-new.png" alt="EverTruth Foods" fill className="object-contain" sizes="96px" />
           </div>
@@ -106,12 +109,14 @@ export function Header() {
 
         {/* Right side - CTA Button and Sidebar trigger */}
         <div className="flex items-center gap-3">
+           <QuoteModal>
           <Button
             size="sm"
             className="bg-[#093257] hover:bg-[#0a4a73] text-white font-medium px-4 py-2 rounded-md transition-colors"
           >
             Get Quote
           </Button>
+          </QuoteModal>
           <SidebarTrigger className="p-2 hover:bg-gray-100 rounded-md transition-colors" />
         </div>
       </div>

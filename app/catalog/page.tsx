@@ -4,44 +4,67 @@ import { MainLayout } from "@/components/layout/main-layout"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Nut, Sprout, Cherry, ArrowRight, Headphones, FileText } from "lucide-react"
+import { ArrowRight, Headphones, FileText } from "lucide-react" // Removed Nut, Sprout, Cherry as they will be replaced
 import { motion } from "framer-motion"
+import Image from "next/image" // Import Image component
+
+// Define images for each category
+const categoryImages = {
+  nuts: [
+    "/images/products/almonds-bowl.jpg",
+    "/images/products/walnut.jpg",
+    "/images/products/cashews-dynamic.webp",
+  ],
+  seeds: [
+    "/images/products/chia seeds.jpg",
+    "/images/products/flax-seeds.jpg",
+    "/images/products/pumpkin-seeds.jpg",
+  ],
+  berries: [
+    "/images/products/cannberries.jpg",
+    "/images/products/blueberries.jpg",
+    "/images/products/turkish-apricots.jpg", // Using an apricot from berries for variety
+  ],
+};
 
 const categories = [
   {
     id: "nuts",
     title: "Premium Nuts",
     description: "Almonds, Cashews, Walnuts, Dates, Pistachios, and more",
-    icon: Nut,
+    // icon: Nut, // No longer needed
     href: "/catalog/nuts",
     itemCount: 9,
     gradient: "from-orange-400 to-red-500",
     bgColor: "bg-orange-50",
     borderColor: "border-orange-200",
+    images: categoryImages.nuts, // Add images array
   },
   {
     id: "seeds",
     title: "Nutritious Seeds",
     description: "Chia, Flax, Pumpkin, Sunflower, and specialty seeds",
-    icon: Sprout,
+    // icon: Sprout, // No longer needed
     href: "/catalog/seeds",
     itemCount: 8,
     gradient: "from-green-400 to-emerald-500",
     bgColor: "bg-green-50",
     borderColor: "border-green-200",
+    images: categoryImages.seeds, // Add images array
   },
   {
     id: "berries",
     title: "Dried Berries",
     description: "Cranberries, Blueberries, Goji Berries, and more",
-    icon: Cherry,
+    // icon: Cherry, // No longer needed
     href: "/catalog/berries",
     itemCount: 7,
     gradient: "from-red-400 to-pink-500",
     bgColor: "bg-red-50",
     borderColor: "border-red-200",
+    images: categoryImages.berries, // Add images array
   },
-]
+];
 
 export default function CatalogPage() {
   const containerVariants = {
@@ -53,7 +76,7 @@ export default function CatalogPage() {
         delayChildren: 0.1,
       },
     },
-  }
+  };
 
   const cardVariants = {
     hidden: { opacity: 0, y: 30, scale: 0.95 },
@@ -66,7 +89,7 @@ export default function CatalogPage() {
         ease: "easeOut",
       },
     },
-  }
+  };
 
   return (
     <MainLayout>
@@ -153,14 +176,35 @@ export default function CatalogPage() {
                     className={`${category.bgColor} ${category.borderColor} border-2 hover:shadow-xl transition-all duration-300 overflow-hidden group`}
                   >
                     <CardContent className="p-0">
-                      {/* Card Header */}
+                      {/* Card Header - Replaced icon with overlapping images */}
                       <div className="p-6 pb-4">
                         <motion.div
-                          className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${category.gradient} flex items-center justify-center shadow-lg`}
-                          whileHover={{ scale: 1.1, rotate: 5 }}
+                          className={`relative w-24 h-24 mx-auto mb-6 flex items-center justify-center`}
+                          whileHover={{ scale: 1.1 }}
                           transition={{ type: "spring", stiffness: 300 }}
                         >
-                          <category.icon className="w-8 h-8 text-white" />
+                          {category.images.map((imgSrc, index) => (
+                            <div
+                              key={index}
+                              className="absolute w-16 h-16 rounded-full overflow-hidden border-2 border-white shadow-md"
+                              style={{
+                                zIndex: 3 - index, // Ensures correct overlap order
+                                left: `${index * 25}%`, // Adjust overlap amount
+                                top: `${index * 15}%`, // Adjust vertical offset for overlap
+                              }}
+                            >
+                              <Image
+                                src={imgSrc}
+                                alt={`${category.title} image ${index + 1}`}
+                                fill
+                                objectFit="cover"
+                                className="transition-transform duration-300 group-hover:scale-110"
+                                onError={(e) => {
+                                  e.currentTarget.src = "https://placehold.co/64x64/E0E0E0/616161?text=Img";
+                                }}
+                              />
+                            </div>
+                          ))}
                         </motion.div>
                         <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{category.title}</h3>
                         <p className="text-gray-600 mb-4 text-center leading-relaxed">{category.description}</p>
@@ -253,5 +297,5 @@ export default function CatalogPage() {
         </section>
       </div>
     </MainLayout>
-  )
+  );
 }

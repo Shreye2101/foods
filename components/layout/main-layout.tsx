@@ -1,10 +1,12 @@
-import type React from "react"
-import { Header, AppSidebar } from "./header"
-import { Footer } from "./footer"
-import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar"
+import type React from "react";
+import { Header, AppSidebar } from "./header";
+import { Footer } from "./footer";
+import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
+import { cn } from "@/lib/utils";
+import { WhatsAppButton } from "../whatsapp-button";
 
 interface MainLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export function MainLayout({ children }: MainLayoutProps) {
@@ -20,6 +22,7 @@ export function MainLayout({ children }: MainLayoutProps) {
           <AppSidebar />
         </div>
       </SidebarProvider>
+       <WhatsAppButton phoneNumber="917060288428" message="Hello! I'd like to know more about your services." />
     </div>
   )
 }
