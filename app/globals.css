@@ -9,6 +9,12 @@
   --foreground: #000000;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
 @layer base {
   * {
     @apply border-border;
@@ -155,6 +161,7 @@
   position: static;
   width: 280px;
   z-index: 60;
+  overflow-x: hidden;
 }
 
 header {

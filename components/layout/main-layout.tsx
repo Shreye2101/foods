@@ -9,10 +9,10 @@ interface MainLayoutProps {
 
 export function MainLayout({ children }: MainLayoutProps) {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <SidebarProvider defaultOpen={false}>
-        <div className="flex min-h-screen">
-          <SidebarInset className="flex-1 flex flex-col">
+        <div className="flex min-h-screen  w-screen overflow-x-hidden">
+          <SidebarInset className="w-0 flex-1 flex flex-col overflow-x-hidden">
             <Header />
             <main className="flex-1 w-full">{children}</main>
             <Footer />
