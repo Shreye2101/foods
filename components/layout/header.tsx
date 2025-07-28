@@ -11,8 +11,6 @@ import {
   SidebarMenuItem,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
-import { QuoteModal } from "@/components/ui/quote-modal"
-
 import { Home, Package, DollarSign, HelpCircle, Mail, Info, FileText, Users, Rss } from "lucide-react"
 
 const navigationItems = [
@@ -33,13 +31,11 @@ const sidebarItems = [
 
 export function AppSidebar() {
   return (
-    <Sidebar side="right" variant="sidebar" className="border-l border-gray-200 bg-white"
-     >
+    <Sidebar side="right" variant="sidebar" className="border-l border-gray-200 bg-white">
       <SidebarHeader className="border-b border-gray-100 bg-white p-6">
         <div className="flex items-center gap-3">
           <div className="relative w-12 h-8">
-            {/* Increased size significantly */}
-            <Image src="/images/logo-new.png" alt="EverTruth Foods" fill className="object-contain" sizes="96px" />
+            <Image src="/images/logo-new.png" alt="EverTruth Foods" fill className="object-contain" sizes="48px" />
           </div>
           <div className="flex flex-col">
             <span className="font-medium text-gray-900 text-sm">B2B Solutions</span>
@@ -92,31 +88,29 @@ export function AppSidebar() {
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
-      <div className="flex h-16 items-center justify-between px-6 md:px-6">
+      <div className="flex h-16 items-center justify-between px-4 md:px-6">
         {/* Left side - Logo only */}
         <Link href="/" className="flex items-center">
-          <div className="relative w-28 h-16 md:w-32 md:h-18 font-medium">
-            {/* Significantly increased logo size */}
+          <div className="relative w-12 h-8 md:w-16 md:h-10">
             <Image
               src="/images/logo-new.png"
               alt="EverTruth Foods"
               fill
               className="object-contain"
-              sizes="(max-width: 768px) 112px, 128px"
+              sizes="(max-width: 768px) 64px, 80px"
+              priority
             />
           </div>
         </Link>
 
         {/* Right side - CTA Button and Sidebar trigger */}
         <div className="flex items-center gap-3">
-           <QuoteModal>
           <Button
             size="sm"
             className="bg-[#093257] hover:bg-[#0a4a73] text-white font-medium px-4 py-2 rounded-md transition-colors"
           >
             Get Quote
           </Button>
-          </QuoteModal>
           <SidebarTrigger className="p-2 hover:bg-gray-100 rounded-md transition-colors" />
         </div>
       </div>

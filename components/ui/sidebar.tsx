@@ -57,7 +57,7 @@ const SidebarProvider = React.forwardRef<
 >(
   (
     {
-      defaultOpen = true,
+      defaultOpen = false,
       open: openProp,
       onOpenChange: setOpenProp,
       className,
@@ -168,16 +168,19 @@ const Sidebar = React.forwardRef<
     {
       side = "left",
       variant = "sidebar",
-      collapsible = "offcanvas",
+      collapsible = "offcanvas", // Keep offcanvas as default for sliding effect
       className,
       children,
       ...props
     },
     ref
   ) => {
-    const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
+    const { isMobile, state, open, openMobile, setOpenMobile } = useSidebar(); // Ensure 'open' (desktop state) is pulled from context.
+                                                                           // `state` ('expanded'|'collapsed') is derived from `open`.
 
     if (collapsible === "none") {
+      // This variant is for a non-collapsible, always-present sidebar.
+      // We will mostly ignore this path for your current use case, unless you want a fixed-width, always-open sidebar.
       return (
         <div
           className={cn(
@@ -189,7 +192,7 @@ const Sidebar = React.forwardRef<
         >
           {children}
         </div>
-      )
+      );
     }
 
     if (isMobile) {
@@ -215,34 +218,46 @@ const Sidebar = React.forwardRef<
     return (
       <div
         ref={ref}
-        className="group peer hidden md:block text-sidebar-foreground"
-        data-state={state}
-        data-collapsible={state === "collapsed" ? collapsible : ""}
-        data-variant={variant}
-        data-side={side}
+        // `peer` is good. `hidden md:block` is also fine, it means it won't show on mobile.
+        // `text-sidebar-foreground`
+        className={cn(
+            "group peer hidden md:block text-sidebar-foreground",
+            // The `data-state` and `data-collapsible` attributes are key here
+            // because your CSS rules will target them.
+            `data-state-${open ? "expanded" : "collapsed"}`, // Use `open` directly for desktop state
+            `data-collapsible-${collapsible}`,
+            `data-variant-${variant}`,
+            `data-side-${side}`
+        )}
+        {...props}
       >
-        {/* This is what handles the sidebar gap on desktop */}
-        {/* <div
-          className={cn(
-            "duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear",
-            "group-data-[collapsible=offcanvas]:w-0",
-            "group-data-[side=right]:rotate-180",
-            variant === "floating" || variant === "inset"
-              ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]"
-              : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
-          )}
-        /> */}
+        {/* THIS IS THE CRITICAL SECTION FOR DESKTOP */}
+        {/*
+          Your existing `Sidebar` component already uses `fixed inset-y-0 z-10 ... md:flex`
+          for its desktop rendering, which means it's intended to be an OVERLAY.
+
+          If you're still getting white space, it means:
+          1. The `group-data-[collapsible=offcanvas]:left/right-[calc(var(--sidebar-width)*-1)]`
+             CSS is NOT effectively hiding it, or
+          2. There's an `opacity` or `visibility` issue (it's hidden but still occupies space visually for some reason), or
+          3. The `MainLayout` is still treating `AppSidebar` as a flex item and applying `w-64`.
+        */}
         <div
+          // This div acts as the actual sidebar container for desktop
           className={cn(
             "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex",
+            // Apply the offcanvas translation based on 'open' state (derived from data-state)
             side === "left"
-              ? "left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]"
-              : "right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]",
-            // Adjust the padding for floating and inset variants.
+              ? "left-0 data-[collapsible=offcanvas][data-state=collapsed]:left-[calc(var(--sidebar-width)*-1)]"
+              : "right-0 data-[collapsible=offcanvas][data-state=collapsed]:right-[calc(var(--sidebar-width)*-1)]",
+            // For other variants like 'floating' or 'inset', their specific width/padding
             variant === "floating" || variant === "inset"
               ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]"
               : "group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l",
-            className
+            // If you want it to truly be hidden and not cast any shadows/interact when closed,
+            // you might need to add `invisible` or `pointer-events-none` when `state` is 'collapsed'
+            state === "collapsed" && collapsible === "offcanvas" && "invisible", // Make it truly invisible when offcanvas and collapsed
+            className // Allows AppSidebar to add more classes if needed
           )}
           {...props}
         >
@@ -254,10 +269,10 @@ const Sidebar = React.forwardRef<
           </div>
         </div>
       </div>
-    )
+    );
   }
-)
-Sidebar.displayName = "Sidebar"
+);
+Sidebar.displayName = "Sidebar";
 
 const SidebarTrigger = React.forwardRef<
   React.ElementRef<typeof Button>,
