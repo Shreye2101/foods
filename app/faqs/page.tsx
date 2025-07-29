@@ -280,7 +280,7 @@ export default function FAQsPage() {
                     <p className="text-xl text-gray-200 mb-8">
                       Our expert team is here to help with any questions not covered in our FAQ section.
                     </p>
-                    <di className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.98 }}>
                         <Link
                           href="/contact"
@@ -297,7 +297,8 @@ export default function FAQsPage() {
                           Call: +91 810-942-9996
                         </a>
                       </motion.div>
-                    </di                  </CardContent>
+                    </div>
+                  </CardContent>
                 </Card>
               </motion.div>
             </div>
