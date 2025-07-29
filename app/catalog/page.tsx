@@ -4,9 +4,9 @@ import { MainLayout } from "@/components/layout/main-layout"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Headphones, FileText } from "lucide-react" // Removed Nut, Sprout, Cherry as they will be replaced
+import { ArrowRight, Headphones, FileText } from "lucide-react"
 import { motion } from "framer-motion"
-import Image from "next/image" // Import Image component
+import Image from "next/image"
 
 // Define images for each category
 const categoryImages = {
@@ -23,7 +23,7 @@ const categoryImages = {
   berries: [
     "/images/products/cannberries.jpg",
     "/images/products/blueberries.jpg",
-    "/images/products/turkish-apricots.jpg", // Using an apricot from berries for variety
+    "/images/products/turkish-apricots.jpg",
   ],
 };
 
@@ -32,37 +32,34 @@ const categories = [
     id: "nuts",
     title: "Premium Nuts",
     description: "Almonds, Cashews, Walnuts, Dates, Pistachios, and more",
-    // icon: Nut, // No longer needed
     href: "/catalog/nuts",
     itemCount: 9,
     gradient: "from-orange-400 to-red-500",
     bgColor: "bg-orange-50",
     borderColor: "border-orange-200",
-    images: categoryImages.nuts, // Add images array
+    images: categoryImages.nuts,
   },
   {
     id: "seeds",
     title: "Nutritious Seeds",
     description: "Chia, Flax, Pumpkin, Sunflower, and specialty seeds",
-    // icon: Sprout, // No longer needed
     href: "/catalog/seeds",
     itemCount: 8,
     gradient: "from-green-400 to-emerald-500",
     bgColor: "bg-green-50",
     borderColor: "border-green-200",
-    images: categoryImages.seeds, // Add images array
+    images: categoryImages.seeds,
   },
   {
     id: "berries",
     title: "Dried Berries",
     description: "Cranberries, Blueberries, Goji Berries, and more",
-    // icon: Cherry, // No longer needed
     href: "/catalog/berries",
     itemCount: 7,
     gradient: "from-red-400 to-pink-500",
     bgColor: "bg-red-50",
     borderColor: "border-red-200",
-    images: categoryImages.berries, // Add images array
+    images: categoryImages.berries,
   },
 ];
 
@@ -188,9 +185,9 @@ export default function CatalogPage() {
                               key={index}
                               className="absolute w-16 h-16 rounded-full overflow-hidden border-2 border-white shadow-md"
                               style={{
-                                zIndex: 3 - index, // Ensures correct overlap order
-                                left: `${index * 25}%`, // Adjust overlap amount
-                                top: `${index * 15}%`, // Adjust vertical offset for overlap
+                                zIndex: 3 - index,
+                                left: `${index * 25}%`,
+                                top: `${index * 15}%`,
                               }}
                             >
                               <Image
@@ -222,18 +219,21 @@ export default function CatalogPage() {
                             asChild
                             className="w-full bg-[#093257] hover:bg-[#0a4a73] text-white font-medium group-hover:shadow-lg transition-all duration-300"
                           >
-                            <Link href={category.href} className="flex items-center justify-center gap-2">
-                              View Products
-                              <motion.div
-                                animate={{ x: [0, 4, 0] }}
-                                transition={{
-                                  duration: 1.5,
-                                  repeat: Number.POSITIVE_INFINITY,
-                                  ease: "easeInOut",
-                                }}
-                              >
-                                <ArrowRight className="w-4 h-4" />
-                              </motion.div>
+                            {/* FIX: Wrap Link's children in a div or fragment to satisfy React.Children.only */}
+                            <Link href={category.href}>
+                              <div className="flex items-center justify-center gap-2">
+                                View Products
+                                <motion.div
+                                  animate={{ x: [0, 4, 0] }}
+                                  transition={{
+                                    duration: 1.5,
+                                    repeat: Number.POSITIVE_INFINITY,
+                                    ease: "easeInOut",
+                                  }}
+                                >
+                                  <ArrowRight className="w-4 h-4" />
+                                </motion.div>
+                              </div>
                             </Link>
                           </Button>
                         </motion.div>

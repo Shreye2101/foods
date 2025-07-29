@@ -233,7 +233,7 @@ export default function SeedProductDetailPage({ params }: ProductDetailPageProps
             {/* Product Details */}
             <div className="space-y-6">
               <h1 className="text-3xl md:text-4xl font-bold text-gray-900">{product.name}</h1>
-              <p className="text-xl text-gray-700 font-semibold">{product.price}</p>
+              {/* <p className="text-xl text-gray-700 font-semibold">{product.price}</p> */}
               <p className="text-gray-600 leading-relaxed">{product.description}</p>
 
               {/* Key Details Grid - Now uses grid-cols-2 for all screen sizes (default) and sm:grid-cols-3 for larger mobiles/tablets */}

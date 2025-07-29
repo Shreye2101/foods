@@ -9,9 +9,9 @@ import { motion } from "framer-motion"
 
 export function HeroSection() {
   const stats = [
-    { icon: Package, number: 500, suffix: "+", label: "Products" },
-    { icon: Users, number: 1000, suffix: "+", label: "B2B Clients" },
-    { icon: Globe, number: 50, suffix: "+", label: "Countries" },
+    { icon: Package, number: 50, suffix: "+", label: "Products" },
+    { icon: Users, number: 100, suffix: "+", label: "B2B Clients" },
+    { icon: Globe, number: 1, suffix: "", label: "Countries" },
   ]
 
   const containerVariants = {

@@ -280,7 +280,7 @@ export default function FAQsPage() {
                     <p className="text-xl text-gray-200 mb-8">
                       Our expert team is here to help with any questions not covered in our FAQ section.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <di className="flex flex-col sm:flex-row gap-4 justify-center">
                       <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.98 }}>
                         <Link
                           href="/contact"
@@ -294,11 +294,10 @@ export default function FAQsPage() {
                           href="tel:+15551234567"
                           className="inline-flex items-center px-6 py-3 border-2 border-white text-white hover:bg-white hover:text-[#093257] font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                         >
-                          Call: +1 (555) 123-4567
+                          Call: +91 810-942-9996
                         </a>
                       </motion.div>
-                    </div>
-                  </CardContent>
+                    </di                  </CardContent>
                 </Card>
               </motion.div>
             </div>

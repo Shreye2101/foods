@@ -1,13 +1,13 @@
 "use client"
 
 import { MainLayout } from "@/components/layout/main-layout"
+import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ProductCarousel } from "@/components/ui/product-carousel"
 import { Timeline } from "@/components/ui/timeline"
 import { Sparkles, Star, TrendingUp, Bell, Check } from "lucide-react"
-import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
 
@@ -21,7 +21,7 @@ const newLaunches = [
     moq: "50kg",
     rating: 4.9,
     price: "From $14.50/kg",
-    category: "nuts",
+    category: "nuts", // Category is still 'nuts' but the detail page path is different
     image: "/images/products/cashews-dynamic.webp",
     isNew: true,
     launchDate: "January 2024",
@@ -35,7 +35,7 @@ const newLaunches = [
     moq: "25kg",
     rating: 4.8,
     price: "From $9.80/kg",
-    category: "seeds",
+    category: "seeds", // Category is still 'seeds'
     image: "/images/products/mixed-seeds.jpg",
     isNew: true,
     launchDate: "February 2024",
@@ -49,7 +49,7 @@ const newLaunches = [
     moq: "25kg",
     rating: 4.9,
     price: "From $12.90/kg",
-    category: "nuts",
+    category: "nuts", // Category is still 'nuts'
     image: "/images/products/dates-basket.webp",
     isNew: true,
     launchDate: "March 2024",
@@ -63,7 +63,7 @@ const newLaunches = [
     moq: "20kg",
     rating: 4.7,
     price: "From $16.50/kg",
-    category: "berries",
+    category: "berries", // Category is still 'berries'
     image: "/images/products/dried-berries.jpg",
     isNew: true,
     launchDate: "March 2024",
@@ -258,8 +258,12 @@ export default function NewLaunchesPage() {
                         src={product.image || "/placeholder.svg"}
                         alt={product.name}
                         fill
+                        objectFit="cover"
                         className="object-cover"
                         sizes="320px"
+                        onError={(e) => {
+                          e.currentTarget.src = "https://placehold.co/320x192/E0E0E0/616161?text=Image+Not+Found";
+                        }}
                       />
                       <div className="absolute inset-0 bg-black/10"></div>
 
@@ -282,7 +286,7 @@ export default function NewLaunchesPage() {
                           {product.name}
                         </h3>
                         <p className="text-gray-600 text-sm mb-3 line-clamp-2">{product.description}</p>
-                        <div className="text-lg font-bold text-[#093257]">{product.price}</div>
+                        {/* <div className="text-lg font-bold text-[#093257]">{product.price}</div> */}
                       </div>
 
                       {/* Available Varieties */}
@@ -332,7 +336,10 @@ export default function NewLaunchesPage() {
                             size="sm"
                             className="bg-[#093257] hover:bg-[#0a4a73] text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                           >
-                            <Link href={`/catalog/${product.category}/${product.id}`}>View Details</Link>
+                            <Link href={`/new-launches/${product.id}`}>
+                              {/* FIX: Wrap the text content in a span */}
+                              <span>View Details</span>
+                            </Link>
                           </Button>
                         </motion.div>
                       </div>
