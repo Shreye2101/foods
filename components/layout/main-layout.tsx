@@ -3,7 +3,6 @@ import { Header, AppSidebar } from "./header"
 import { Footer } from "./footer"
 import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar"
 import { WhatsAppButton } from "../whatsapp-button"
-import { PopupGuide } from "../PopupGuide"
 import { FloatingAssistant } from "../FloatingAssistant"
 
 interface MainLayoutProps {
