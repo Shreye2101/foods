@@ -405,7 +405,7 @@ export default function NutsProductDetailPage({ params }: ProductDetailPageProps
                     />
                     <div className="p-2 sm:p-4">
                       <h3 className="font-semibold text-sm sm:text-lg text-gray-900 mb-1 line-clamp-1">{relatedProduct.name}</h3>
-                      <p className="text-gray-600 text-xs sm:text-sm">{relatedProduct.price}</p>
+                      <p className="text-gray-600 text-xs sm:text-sm">Click to Know more</p>
                     </div>
                   </div>
                 </Link>

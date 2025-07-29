@@ -189,7 +189,7 @@ export default function TermsPage() {
                       size="lg"
                       className="border-gray-300 text-gray-700 hover:bg-gray-50 bg-transparent"
                     >
-                      <a href="mailto:legal@evertruthfoods.com">legal@evertruthfoods.com</a>
+                      <a href="mailto:Info@evertruth.com">legal@evertruthfoods.com</a>
                     </Button>
                   </div>
                 </CardContent>

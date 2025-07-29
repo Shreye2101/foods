@@ -12,6 +12,7 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
 import { Home, Package, DollarSign, HelpCircle, Mail, Info, FileText, Users, Rss } from "lucide-react"
+import { QuoteModal } from "../ui/quote-modal"
 
 const navigationItems = [
   { name: "Home", href: "/", icon: Home },
@@ -87,30 +88,32 @@ export function AppSidebar() {
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
+    <header className="fixed top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
       <div className="flex h-16 items-center justify-between px-4 md:px-6">
         {/* Left side - Logo only */}
-        <Link href="/" className="flex items-center">
-          <div className="relative w-12 h-8 md:w-16 md:h-10">
-            <Image
-              src="/images/logo-new.png"
-              alt="EverTruth Foods"
-              fill
-              className="object-contain"
-              sizes="(max-width: 768px) 64px, 80px"
-              priority
-            />
-          </div>
-        </Link>
+       <Link href="/" className="flex items-center">
+  <div className="relative w-28 h-16 md:w-32 md:h-20 font-medium">
+    <Image
+      src="/images/logo-new.png"
+      alt="EverTruth Foods"
+      fill
+      className="object-contain"
+      sizes="(max-width: 768px) 128px, 160px"
+    />
+  </div>
+</Link>
+
 
         {/* Right side - CTA Button and Sidebar trigger */}
         <div className="flex items-center gap-3">
+          <QuoteModal>
           <Button
             size="sm"
             className="bg-[#093257] hover:bg-[#0a4a73] text-white font-medium px-4 py-2 rounded-md transition-colors"
           >
             Get Quote
           </Button>
+          </QuoteModal>
           <SidebarTrigger className="p-2 hover:bg-gray-100 rounded-md transition-colors" />
         </div>
       </div>

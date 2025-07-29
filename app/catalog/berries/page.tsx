@@ -14,7 +14,7 @@ const berriesProducts = [
     benefits: ["Rich in Antioxidants", "Urinary Tract Health", "High in Fiber"], // Inferred benefits
     moq: "11.34kg",
     rating: 4.7, // Inferred rating
-    price: "From $9.50/kg", // Inferred price
+    // price: "From $9.50/kg", // Inferred price
     category: "berries",
     image: "/images/products/cannberries.jpg",
     origin: "USA, Canada",
@@ -29,7 +29,7 @@ const berriesProducts = [
     benefits: ["Antioxidant Powerhouse", "Brain Health", "Eye Health"], // Inferred benefits
     moq: "1kg pouch in 10kg box",
     rating: 4.8, // Inferred rating
-    price: "From $12.00/kg", // Inferred price
+    // price: "From $12.00/kg", // Inferred price
     category: "berries",
     image: "/images/products/blueberries.jpg",
     origin: "USA, Canada, China",
@@ -43,7 +43,7 @@ const berriesProducts = [
     benefits: ["Rich in Vitamin A", "High in Fiber", "Potassium Source"], // Inferred benefits
     moq: "12.5kg",
     rating: 4.6, // Inferred rating
-    price: "From $6.50/kg", // Inferred price
+    // price: "From $6.50/kg", // Inferred price
     category: "dried-fruits",
     image: "/images/products/turkish-apricots.jpg",
     origin: "Turkey",
@@ -58,7 +58,7 @@ const berriesProducts = [
     benefits: ["Digestive Health", "High in Fiber", "Bone Health"], // Inferred benefits
     moq: "11.34kg",
     rating: 4.7, // Inferred rating
-    price: "From $5.80/kg", // Inferred price
+    // price: "From $5.80/kg", // Inferred price
     category: "dried-fruits",
     image: "/images/products/prunes.jpg",
     origin: "USA, Chile, Argentina",
@@ -73,7 +73,7 @@ const berriesProducts = [
     benefits: ["Rich in Vitamin C", "Good for Digestion", "Immune Support"], // Inferred benefits
     moq: "1kg pouch in 10kg box",
     rating: 4.8, // Inferred rating
-    price: "From $8.00/kg", // Inferred price
+    // price: "From $8.00/kg", // Inferred price
     category: "dried-fruits",
     image: "/images/products/dried-mango.avif",
     origin: "India, Thailand",
@@ -89,7 +89,7 @@ const berriesProducts = [
     benefits: ["High in Vitamin C", "Fiber Rich", "Antioxidants"], // Inferred benefits
     moq: "1kg pouch in 10kg box",
     rating: 4.7, // Inferred rating
-    price: "From $9.00/kg", // Inferred price
+    // price: "From $9.00/kg", // Inferred price
     category: "dried-fruits",
     image: "/images/products/dried-kiwi.jpg",
     origin: "Thailand, India, China",
@@ -104,7 +104,7 @@ const berriesProducts = [
     benefits: ["Digestive Enzymes", "Vitamin C Source", "Antioxidant Support"], // Inferred benefits
     moq: "1kg pouch in 10kg box",
     rating: 4.5, // Inferred rating
-    price: "From $7.00/kg", // Inferred price
+    // price: "From $7.00/kg", // Inferred price
     category: "dried-fruits",
     image: "/images/products/dried-papaya.avif",
     origin: "India, Thailand",
@@ -120,7 +120,7 @@ const berriesProducts = [
     benefits: ["Rich in Vitamin C", "Bromelain Source", "Digestive Aid"], // Inferred benefits
     moq: "1kg pouch in 10kg box",
     rating: 4.6, // Inferred rating
-    price: "From $7.50/kg", // Inferred price
+    // price: "From $7.50/kg", // Inferred price
     category: "dried-fruits",
     image: "/images/products/dried-pineapple.webp",
     origin: "India, Thailand",

@@ -180,7 +180,7 @@ export default function PrivacyPage() {
                       size="lg"
                       className="border-gray-300 text-gray-700 hover:bg-gray-50 bg-transparent"
                     >
-                      <a href="mailto:privacy@evertruthfoods.com">privacy@evertruthfoods.com</a>
+                      <a href="mailto:Info@evertruth.com">privacy@evertruthfoods.com</a>
                     </Button>
                   </div>
                 </CardContent>

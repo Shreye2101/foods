@@ -76,7 +76,7 @@ export function ProductCard({ product, className = "" }: ProductCardProps) {
               )}
             </div>
             <p className="text-gray-600 text-sm mb-3 line-clamp-2">{product.description}</p>
-            <div className="text-lg font-semibold text-[#093257] mb-3">{product.price}</div>
+            {/* <div className="text-lg font-semibold text-[#093257] mb-3">{product.price}</div> */}
           </div>
 
           {/* Varieties */}

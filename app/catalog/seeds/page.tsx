@@ -14,7 +14,7 @@ const seedsProducts = [
     benefits: ["Omega-3 Rich", "High Fiber", "Antioxidants"], // Inferred
     moq: "25kg",
     rating: 4.8, // Inferred
-    price: "From $7.20/kg", // Inferred
+    // price: "From $7.20/kg", // Inferred
     category: "seeds",
     image: "/images/products/chia seeds.jpg",
     origin: "MP, Karnataka",
@@ -31,7 +31,7 @@ const seedsProducts = [
     benefits: ["Omega-3 ALA", "Digestive Health", "Lignans"], // Inferred
     moq: "25kg",
     rating: 4.7, // Inferred
-    price: "From $5.40/kg", // Inferred
+    // price: "From $5.40/kg", // Inferred
     category: "seeds",
     image: "/images/products/flax-seeds.jpg",
     origin: "MP, Rajasthan",
@@ -48,7 +48,7 @@ const seedsProducts = [
     benefits: ["Magnesium Rich", "Zinc Source", "Antioxidants"], // Inferred
     moq: "25kg",
     rating: 4.6, // Inferred
-    price: "From $6.80/kg", // Inferred
+    // price: "From $6.80/kg", // Inferred
     category: "seeds",
     image: "/images/products/pumpkin-seeds.jpg",
     origin: "China",
@@ -64,7 +64,7 @@ const seedsProducts = [
     benefits: ["Vitamin E Rich", "Healthy Fats", "Antioxidants"], // Inferred
     moq: "25kg",
     rating: 4.5, // Inferred
-    price: "From $4.20/kg", // Inferred
+    // price: "From $4.20/kg", // Inferred
     category: "seeds",
     image: "/images/products/sunflower-seeds.jpg",
     origin: "China",
@@ -80,7 +80,7 @@ const seedsProducts = [
     benefits: ["Complete Protein", "High Fiber", "Iron Rich"], // Inferred
     moq: "25kg",
     rating: 4.7, // Inferred
-    price: "From $8.50/kg", // Inferred
+    // price: "From $8.50/kg", // Inferred
     category: "seeds",
     image: "/images/products/quinoa-seeds.jpg",
     origin: "MP, Rajasthan",
@@ -97,7 +97,7 @@ const seedsProducts = [
     benefits: ["Cooling Properties", "Fiber Rich", "Detoxifying"], // Inferred
     moq: "25kg",
     rating: 4.6, // Inferred
-    price: "From $9.00/kg", // Inferred
+    // price: "From $9.00/kg", // Inferred
     category: "seeds",
     image: "/images/products/basil.webp",
     origin: "India, Afghanistan",
@@ -114,7 +114,7 @@ const seedsProducts = [
     benefits: ["Protein Source", "Magnesium Rich", "Healthy Fats"], // Inferred
     moq: "25kg",
     rating: 4.5, // Inferred
-    price: "From $5.80/kg", // Inferred
+    // price: "From $5.80/kg", // Inferred
     category: "seeds",
     image: "/images/products/watermelon.jpg",
     origin: "Sudan, India",
@@ -130,7 +130,7 @@ const seedsProducts = [
     benefits: ["Calcium Rich", "Healthy Oils", "Protein Source"], // Inferred
     moq: "25kg",
     rating: 4.7, // Inferred
-    price: "From $3.90/kg", // Inferred
+    // price: "From $3.90/kg", // Inferred
     category: "seeds",
     image: "/images/products/saseme.jpg",
     origin: "Gujarat, RJ, UP, MP",

@@ -30,15 +30,15 @@ export function Footer() {
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
-      description: "Mon-Fri 9AM-6PM EST",
+      value: "+91 810-942-9996",
+      href: "tel:8109429996",
+      description: "Mon-Fri 9AM-6PM IST",
     },
     {
       icon: Mail,
       label: "Email",
-      value: "info@evertruthfoods.com",
-      href: "mailto:info@evertruthfoods.com",
+      value: "Info@evertruth.com",
+      href: "mailto:Info@evertruth.com",
       description: "24-48 hour response",
     },
     {

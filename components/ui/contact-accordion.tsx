@@ -29,7 +29,7 @@ const contactMethods: ContactMethod[] = [
     title: "Email Support",
     primary: "sales@evertruthfoods.com",
     secondary: "24-48 hour response",
-    href: "mailto:sales@evertruthfoods.com",
+    href: "mailto:Info@evertruth.com",
   },
   {
     icon: MapPin,

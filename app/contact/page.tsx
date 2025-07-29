@@ -14,9 +14,9 @@ const communicationChannels = [
   {
     icon: Phone,
     name: "Call Us",
-    detail: "+1 (555) 123-4567",
-    description: "Mon-Fri 9AM-6PM EST",
-    href: "tel:+15551234567",
+    detail: "+91 810-942-9996",
+    description: "Mon-Fri 9AM-6PM IST",
+    href: "tel:+918109429996",
     color: "from-blue-500 to-blue-600",
     bgColor: "bg-blue-50",
     hoverColor: "hover:bg-blue-100",
@@ -24,9 +24,9 @@ const communicationChannels = [
   {
     icon: Mail,
     name: "Email Us",
-    detail: "sales@evertruthfoods.com",
+    detail: "Info@evertruth.com",
     description: "24-48 hour response",
-    href: "mailto:sales@evertruthfoods.com",
+    href: "mailto:Info@evertruth.com",
     color: "from-green-500 to-green-600",
     bgColor: "bg-green-50",
     hoverColor: "hover:bg-green-100",
@@ -34,9 +34,9 @@ const communicationChannels = [
   {
     icon: MessageCircle,
     name: "WhatsApp",
-    detail: "+1 (555) 123-4567",
+    detail: "+91 810-942-9996",
     description: "Quick messaging",
-    href: "https://wa.me/15551234567",
+    href: "https://wa.me/918109429996",
     color: "from-emerald-500 to-emerald-600",
     bgColor: "bg-emerald-50",
     hoverColor: "hover:bg-emerald-100",
@@ -74,6 +74,33 @@ const communicationChannels = [
 ]
 
 export default function ContactPage() {
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault()
+
+  const form = e.currentTarget
+  const firstName = (form.elements.namedItem("firstName") as HTMLInputElement)?.value || ""
+  const lastName = (form.elements.namedItem("lastName") as HTMLInputElement)?.value || ""
+  const company = (form.elements.namedItem("company") as HTMLInputElement)?.value || ""
+  const email = (form.elements.namedItem("email") as HTMLInputElement)?.value || ""
+  const phone = (form.elements.namedItem("phone") as HTMLInputElement)?.value || ""
+  const message = (form.elements.namedItem("message") as HTMLTextAreaElement)?.value || ""
+
+  const subject = `New Inquiry from ${firstName} ${lastName}`
+  const body = `
+Name: ${firstName} ${lastName}
+Company: ${company}
+Email: ${email}
+Phone: ${phone}
+
+Message:
+${message}
+  `
+
+  const mailtoLink = `mailto:Info@evertruth.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  window.location.href = mailtoLink
+}
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -227,7 +254,7 @@ export default function ContactPage() {
                   <p className="text-gray-600">Fill out the form below and we'll get back to you within 24 hours</p>
                 </CardHeader>
                 <CardContent className="p-8">
-                  <form className="space-y-6">
+                  <form className="space-y-6" onSubmit={handleSubmit}>
                     {/* Name Fields */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <motion.div
@@ -242,7 +269,7 @@ export default function ContactPage() {
                         </Label>
                         <Input
                           id="firstName"
-                          placeholder="John"
+                          placeholder="Enter Your first Name"
                           className="border-gray-300 focus:border-[#093257] focus:ring-[#093257] transition-colors"
                         />
                       </motion.div>
@@ -258,7 +285,7 @@ export default function ContactPage() {
                         </Label>
                         <Input
                           id="lastName"
-                          placeholder="Doe"
+                          placeholder="Enter Your Last Name"
                           className="border-gray-300 focus:border-[#093257] focus:ring-[#093257] transition-colors"
                         />
                       </motion.div>
@@ -277,7 +304,7 @@ export default function ContactPage() {
                       </Label>
                       <Input
                         id="company"
-                        placeholder="Your Company Ltd."
+                        placeholder="Enter Your Company Name"
                         className="border-gray-300 focus:border-[#093257] focus:ring-[#093257] transition-colors"
                       />
                     </motion.div>
@@ -297,7 +324,7 @@ export default function ContactPage() {
                         <Input
                           id="email"
                           type="email"
-                          placeholder="john@company.com"
+                          placeholder="Enter Your Email Address"
                           className="border-gray-300 focus:border-[#093257] focus:ring-[#093257] transition-colors"
                         />
                       </motion.div>
@@ -313,7 +340,7 @@ export default function ContactPage() {
                         </Label>
                         <Input
                           id="phone"
-                          placeholder="+1 (555) 123-4567"
+                          placeholder="+91"
                           className="border-gray-300 focus:border-[#093257] focus:ring-[#093257] transition-colors"
                         />
                       </motion.div>
@@ -321,7 +348,7 @@ export default function ContactPage() {
 
                     {/* Inquiry Type */}
                     <motion.div
-                      className="space-y-2"
+                      className="space-y-2 cursor-pointer"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
@@ -334,13 +361,13 @@ export default function ContactPage() {
                         <SelectTrigger className="border-gray-300 focus:border-[#093257] focus:ring-[#093257]">
                           <SelectValue placeholder="Select inquiry type" />
                         </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="bulk-quote">Bulk Quote Request</SelectItem>
-                          <SelectItem value="product-info">Product Information</SelectItem>
-                          <SelectItem value="samples">Sample Request</SelectItem>
-                          <SelectItem value="partnership">Partnership Opportunity</SelectItem>
-                          <SelectItem value="technical">Technical Support</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
+                        <SelectContent className="bg-white shadow-md rounded-md border border-gray-200">
+                          <SelectItem className="cursor-pointer" value="bulk-quote">Bulk Quote Request</SelectItem>
+                          <SelectItem className="cursor-pointer" value="product-info">Product Information</SelectItem>
+                          <SelectItem className="cursor-pointer" value="samples">Sample Request</SelectItem>
+                          <SelectItem className="cursor-pointer" value="partnership">Partnership Opportunity</SelectItem>
+                          <SelectItem className="cursor-pointer" value="technical">Technical Support</SelectItem>
+                          <SelectItem className="cursor-pointer" value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
                     </motion.div>
