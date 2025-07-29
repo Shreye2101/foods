@@ -12,7 +12,6 @@ export default function HomePage() {
       <CategoriesSection />
       <FeaturesSection />
       <TrustedCustomers />
-     <WhatsAppButton phoneNumber="917060288428" message="Hello! I'd like to know more about your services." />
     </MainLayout>
     </>
   )
