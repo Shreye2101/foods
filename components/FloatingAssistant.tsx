@@ -16,7 +16,6 @@ export function FloatingAssistant() {
 
   // Form fields
   const [name, setName] = useState("")
-  const [company, setCompany] = useState("")
   const [email, setEmail] = useState("")
   const [query, setQuery] = useState("")
 
@@ -54,10 +53,9 @@ export function FloatingAssistant() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
-    const subject = `Quote Inquiry from ${name} (${company})`
+    const subject = `Quote Inquiry from ${name}`
     const body = `
 Customer Name: ${name}
-Company Name: ${company}
 Email: ${email}
 
 Quote/Query:
@@ -104,12 +102,6 @@ ${query}
               required
             />
             <Input
-              placeholder="Company Name"
-              value={company}
-              onChange={(e) => setCompany(e.target.value)}
-              required
-            />
-            <Input
               type="email"
               placeholder="Email"
               value={email}
@@ -129,7 +121,7 @@ ${query}
               className="w-full bg-[#093257] hover:bg-[#0a4a73] text-white font-semibold py-2 mt-1"
             >
               <Send className="w-4 h-4 mr-2" />
-              Submit Quote
+              Submit Query
             </Button>
           </form>
 
