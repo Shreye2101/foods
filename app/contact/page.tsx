@@ -24,7 +24,7 @@ const communicationChannels = [
   {
     icon: Mail,
     name: "Email Us",
-    detail: "Info@evertruth.com",
+    detail: "info@evertruth.com",
     description: "24-48 hour response",
     href: "mailto:Info@evertruth.com",
     color: "from-green-500 to-green-600",

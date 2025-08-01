@@ -72,15 +72,15 @@ const faqCategories = [
     bgColor: "bg-orange-50",
     faqs: [
       {
-        question: "Which countries do you ship to?",
-        answer:
-          "We ship to 50+ countries worldwide including North America, Europe, Asia-Pacific, and select markets in other regions. Contact us for specific country availability.",
-      },
+     question: "Do you ship across India?",
+     answer:
+      "Yes, we deliver to all major cities and towns across India. Please contact us to confirm specific delivery availability for your location.",
+     },
       {
-        question: "How long does shipping take?",
-        answer:
-          "Shipping times vary by destination: Domestic (2-5 days), North America (5-10 days), Europe (7-14 days), Asia-Pacific (10-21 days). Express shipping options available.",
-      },
+      question: "How long does shipping take?",
+      answer:
+      "Shipping within India typically takes 2-5 business days. Express shipping options are also available for faster delivery.",
+     },
       {
         question: "How do you handle temperature-sensitive products?",
         answer:

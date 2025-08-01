@@ -20,15 +20,15 @@ const features = [
   },
   {
     icon: Rocket,
-    title: "Global Reach",
-    description: "Serving 50+ countries reliably",
+    title: "Nationwide Delivery",
+    description: "Reliably serving customers across India",
     color: "from-blue-400 to-indigo-500",
     bgColor: "bg-blue-50",
   },
   {
     icon: Award,
     title: "Trusted Partner",
-    description: "1000+ satisfied B2B clients",
+    description: "100+ satisfied B2B clients",
     color: "from-purple-400 to-pink-500",
     bgColor: "bg-purple-50",
   },

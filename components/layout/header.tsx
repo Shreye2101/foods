@@ -11,14 +11,14 @@ import {
   SidebarMenuItem,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
-import { Home, Package, DollarSign, HelpCircle, Mail, Info, FileText, Users, Rss } from "lucide-react"
+import { Home, Package, DollarSign, HelpCircle, Mail, Info, FileText, Users, Rss, IndianRupee } from "lucide-react"
 import { QuoteModal } from "../ui/quote-modal"
 
 const navigationItems = [
   { name: "Home", href: "/", icon: Home },
   { name: "New Launches", href: "/new-launches", icon: Package },
   { name: "Product Catalog", href: "/catalog", icon: Package },
-  { name: "Pricing / Bulk Inquiry", href: "/pricing", icon: DollarSign },
+  { name: "Pricing / Bulk Inquiry", href: "/pricing", icon: IndianRupee },
   { name: "FAQs", href: "/faqs", icon: HelpCircle },
   { name: "Contact Us", href: "/contact", icon: Mail },
 ]

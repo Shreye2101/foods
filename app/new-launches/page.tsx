@@ -24,7 +24,7 @@ const newLaunches = [
     category: "nuts", // Category is still 'nuts' but the detail page path is different
     image: "/images/products/cashews-dynamic.webp",
     isNew: true,
-    launchDate: "January 2024",
+    launchDate: "January 2025",
   },
   {
     id: "superfood-seed-mix",
@@ -38,7 +38,7 @@ const newLaunches = [
     category: "seeds", // Category is still 'seeds'
     image: "/images/products/mixed-seeds.jpg",
     isNew: true,
-    launchDate: "February 2024",
+    launchDate: "February 2025",
   },
   {
     id: "premium-date-collection",
@@ -52,7 +52,7 @@ const newLaunches = [
     category: "nuts", // Category is still 'nuts'
     image: "/images/products/dates-basket.webp",
     isNew: true,
-    launchDate: "March 2024",
+    launchDate: "March 2025",
   },
   {
     id: "antioxidant-berry-blend",
@@ -66,32 +66,32 @@ const newLaunches = [
     category: "berries", // Category is still 'berries'
     image: "/images/products/dried-berries.jpg",
     isNew: true,
-    launchDate: "March 2024",
+    launchDate: "March 2025",
   },
 ]
 
 const timelineItems = [
   {
     name: "Organic Cashew Blend",
-    date: "January 2024",
+    date: "January 2025",
     category: "Nuts",
     description: "Premium organic cashews with enhanced roasting process",
   },
   {
     name: "Superfood Seed Mix",
-    date: "February 2024",
+    date: "February 2025",
     category: "Seeds",
     description: "Curated blend of nutritious seeds for health-conscious consumers",
   },
   {
     name: "Premium Date Collection",
-    date: "March 2024",
+    date: "March 2025",
     category: "Nuts",
     description: "Exclusive collection of finest Medjool and Deglet Noor dates",
   },
   {
     name: "Antioxidant Berry Blend",
-    date: "March 2024",
+    date: "March 2025",
     category: "Berries",
     description: "Power-packed blend of antioxidant-rich berries",
   },
@@ -102,21 +102,21 @@ const upcomingLaunches = [
     title: "Freeze-Dried Fruit Collection",
     description:
       "Revolutionary freeze-drying technology preserving maximum nutrition and flavor for premium applications",
-    expectedLaunch: "Q2 2024",
+    expectedLaunch: "Q2 2025",
     category: "Fruits",
     comingSoon: true,
   },
   {
     title: "Protein-Enhanced Nut Mixes",
     description: "Specially formulated nut blends with added plant proteins for fitness and health markets",
-    expectedLaunch: "Q3 2024",
+    expectedLaunch: "Q3 2025",
     category: "Nuts",
     comingSoon: true,
   },
   {
     title: "Organic Sprouted Seeds",
     description: "Nutrient-dense sprouted seeds for health-conscious consumers and premium food applications",
-    expectedLaunch: "Q3 2024",
+    expectedLaunch: "Q3 2025",
     category: "Seeds",
     comingSoon: true,
   },
@@ -361,7 +361,7 @@ export default function NewLaunchesPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">2024 Launch Timeline</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">2025 Launch Timeline</h2>
               <p className="text-xl text-gray-600">Track our product launches throughout the year</p>
             </motion.div>
 

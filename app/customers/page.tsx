@@ -6,44 +6,44 @@ import { Users, Star, Globe, Award, TrendingUp, Shield, CheckCircle } from "luci
 import Link from "next/link"
 
 const customerStats = [
-  { number: "1000+", label: "Active B2B Clients", icon: Users },
-  { number: "50+", label: "Countries Served", icon: Globe },
+  { number: "100+", label: "Active B2B Clients", icon: Users },
+  { number: "1", label: "Countries Serving", icon: Globe },
   { number: "98%", label: "Customer Satisfaction", icon: Star },
-  { number: "14+", label: "Years of Excellence", icon: Award },
+  { number: "1+", label: "Proven Excellence", icon: Award },
 ]
 
 const testimonials = [
   {
-    company: "Global Snacks Inc.",
+    company: "Bharat Foods Pvt. Ltd.",
     industry: "Food Manufacturing",
-    location: "United States",
+    location: "Mumbai, Maharashtra",
     testimonial:
       "EverTruth Foods has been our trusted partner for over 5 years. Their consistent quality and reliable delivery have helped us maintain our production schedules without any disruptions.",
-    contact: "Sarah Johnson, Procurement Manager",
+    contact: "Priya Sharma, Procurement Manager",
     rating: 5,
     products: ["Almonds", "Cashews", "Dried Cranberries"],
   },
   {
-    company: "European Health Foods Ltd.",
+    company: "Swadeshi Organics Ltd.",
     industry: "Health Food Distribution",
-    location: "United Kingdom",
+    location: "Bengaluru, Karnataka",
     testimonial:
       "The organic certification and traceability documentation provided by EverTruth Foods exceeds our requirements. Their customer service team is always responsive and professional.",
-    contact: "Marcus Weber, Quality Director",
+    contact: "Arjun Singh, Quality Director",
     rating: 5,
     products: ["Organic Seeds", "Goji Berries", "Walnuts"],
   },
   {
-    company: "Asia Pacific Nutrition",
+    company: "Nourish India Supplements",
     industry: "Nutritional Supplements",
-    location: "Singapore",
+    location: "New Delhi, Delhi",
     testimonial:
       "Working with EverTruth Foods has streamlined our supply chain significantly. Their flexible packaging options and competitive pricing have improved our margins.",
-    contact: "Li Wei, Supply Chain Director",
+    contact: "Vikram Iyer, Supply Chain Director",
     rating: 5,
     products: ["Chia Seeds", "Flax Seeds", "Pumpkin Seeds"],
   },
-]
+];
 
 const industrySegments = [
   {
@@ -145,7 +145,7 @@ export default function CustomersPage() {
         </section>
 
         {/* Industry Segments */}
-        <section className="py-16 bg-white">
+        {/* <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
@@ -176,7 +176,7 @@ export default function CustomersPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Customer Testimonials */}
         <section className="py-16 bg-gray-50">

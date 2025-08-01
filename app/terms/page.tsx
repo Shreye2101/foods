@@ -122,7 +122,7 @@ export default function TermsPage() {
               <div className="flex items-center justify-center gap-4 text-sm text-gray-300">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
-                  <span>Last Updated: January 1, 2024</span>
+                  <span>Last Updated: January 1, 2025</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Shield className="w-4 h-4" />
@@ -189,14 +189,14 @@ export default function TermsPage() {
                       size="lg"
                       className="border-gray-300 text-gray-700 hover:bg-gray-50 bg-transparent"
                     >
-                      <a href="mailto:Info@evertruth.com">legal@evertruthfoods.com</a>
+                      <a href="mailto:Info@evertruth.com">info@evertruthfoods.com</a>
                     </Button>
                   </div>
                 </CardContent>
               </Card>
 
               {/* Download Options */}
-              <div className="mt-8 text-center">
+              {/* <div className="mt-8 text-center">
                 <p className="text-gray-600 mb-4">Need a copy for your records?</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button variant="outline" size="sm">
@@ -206,7 +206,7 @@ export default function TermsPage() {
                     Print Version
                   </Button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

@@ -65,11 +65,11 @@ const benefits = [
   },
   {
     icon: Truck,
-    title: "Global Shipping",
-    description: "Worldwide delivery with temperature-controlled logistics and real-time tracking",
+    title: "Nationwide Delivery",
+    description: "Delivery across India with temperature-controlled logistics and real-time tracking",
     color: "from-green-500 to-green-600",
     bgColor: "bg-green-50",
-  },
+},
   {
     icon: Shield,
     title: "Quality Guarantee",

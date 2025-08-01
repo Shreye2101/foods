@@ -6,10 +6,10 @@ import { AccordionSection } from "@/components/ui/accordion-section"
 import Link from "next/link"
 
 const stats = [
-  { number: "14+", label: "Years Experience", icon: Clock },
-  { number: "1000+", label: "B2B Clients", icon: Users },
-  { number: "50+", label: "Countries Served", icon: Globe },
-  { number: "500+", label: "Products", icon: Award },
+  { number: "1+", label: "Proven Experience", icon: Clock },
+  { number: "100+", label: "B2B Clients", icon: Users },
+  { number: "1", label: "Country Serving", icon: Globe },
+  { number: "50+", label: "Products", icon: Award },
 ]
 
 const values = [
@@ -125,24 +125,24 @@ export default function AboutPage() {
             </div>
 
             {/* Desktop Content */}
-            <div className="hidden md:block">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Story</h2>
-                <div className="prose prose-lg mx-auto text-gray-600">
-                  <p className="text-xl leading-relaxed mb-6">
-                    EverTruth Foods began as a vision to bridge the gap between premium quality agricultural products
-                    and businesses that demand excellence. Founded in 2010 by a team of agricultural experts and
-                    business professionals, we started with a simple mission: to provide the highest quality nuts,
-                    seeds, and dried berries to B2B clients worldwide.
-                  </p>
-                  <p className="text-lg leading-relaxed mb-6">
-                    What started as a small operation has grown into a global enterprise, but our core values remain
-                    unchanged. We believe in building lasting relationships with our suppliers, ensuring fair trade
-                    practices, and maintaining the highest standards of quality control throughout our supply chain.
-                  </p>
-                </div>
-              </div>
-            </div>
+           <div className="hidden md:block">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Story</h2>
+    <div className="prose prose-lg mx-auto text-gray-600">
+      <p className="text-xl leading-relaxed mb-6">
+        EverTruth Foods began as a vision to bridge the gap between premium quality agricultural products
+        and businesses that demand excellence. Founded by a team of agricultural experts and
+        business professionals, we started with a simple mission: to provide the highest quality nuts,
+        seeds, and dried berries to B2B clients across India.
+      </p>
+      <p className="text-lg leading-relaxed mb-6">
+        What started as a small operation has grown into a leading enterprise, but our core values remain
+        unchanged. We believe in building lasting relationships with our suppliers, ensuring fair trade
+        practices, and maintaining the highest standards of quality control throughout our supply chain.
+      </p>
+    </div>
+  </div>
+</div>
 
             {/* Values Section */}
             <div className="mt-16">
@@ -189,9 +189,9 @@ export default function AboutPage() {
               <div className="bg-blue-50 rounded-2xl p-6 md:p-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
                   <div className="md:order-2">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Global Logistics</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Nationwide Logistics</h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Our worldwide distribution network ensures timely delivery with temperature-controlled storage and
+                      Our robust distribution network ensures timely delivery across India with temperature-controlled storage and
                       transportation to maintain product integrity.
                     </p>
                   </div>

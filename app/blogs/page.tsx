@@ -17,7 +17,7 @@ const featuredPost = {
   excerpt:
     "Explore how sustainable farming practices are revolutionizing the nuts and seeds industry, and what it means for B2B buyers looking for environmentally responsible suppliers.",
   author: "Dr. Sarah Johnson",
-  date: "March 15, 2024",
+  date: "March 15, 2025",
   readTime: "8 min read",
   category: "Sustainability",
   image: "/images/products/mixed-seeds.jpg",
