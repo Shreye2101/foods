@@ -89,9 +89,9 @@ const privacySections = [
     title: "9. Contact Us",
     content: [
       "If you have any questions about this Privacy Policy, our data practices, or your rights, please contact us:",
-      "**By email:** privacy@evertruthfoods.com",
-      "**By visiting this page on our website:** [Link to Contact Page]",
-      "**By mail:** EverTruth Foods, [Your Company Address], Noida, Uttar Pradesh, India.",
+      "By email: info@evertruthfoods.com",
+      "By visiting this page on our website:Contact Page",
+      "By mail: EverTruth Foods, Noida, Uttar Pradesh, India.",
     ],
   },
 ];
