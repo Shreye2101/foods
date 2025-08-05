@@ -187,7 +187,7 @@ export default function PrivacyPage() {
               </Card>
 
               {/* Download Options */}
-              <div className="mt-8 text-center">
+              {/* <div className="mt-8 text-center">
                 <p className="text-gray-600 mb-4">Need a copy for your records?</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button variant="outline" size="sm">
@@ -197,7 +197,7 @@ export default function PrivacyPage() {
                     Print Version
                   </Button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
