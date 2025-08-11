@@ -61,12 +61,12 @@ const communicationChannels = [
     bgColor: "bg-pink-50",
     hoverColor: "hover:bg-pink-100",
   },
-  {
+ {
     icon: MapPin,
     name: "Visit Us",
     detail: "Noida, Uttar Pradesh",
     description: "India",
-    href: "https://www.google.com/maps/place/Evertruth+Foods/@28.5835979,77.319028,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce5d989f66b69:0x22879a811d739c3e!8m2!3d28.5835979!4d77.319028!16s%2Fg%2F11b6d76r1d?entry=ttu",
+    href: "https://maps.google.com/?cid=3662961458849445041&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
     color: "from-orange-500 to-red-600",
     bgColor: "bg-orange-50",
     hoverColor: "hover:bg-orange-100",

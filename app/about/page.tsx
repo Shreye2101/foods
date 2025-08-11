@@ -46,7 +46,7 @@ export default function AboutPage() {
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-3xl md:text-5xl font-bold mb-6">About EverTruth Foods</h1>
               <p className="text-lg md:text-xl text-gray-200 mb-8">
-                Your trusted partner in premium nuts, seeds, and dried berries since 2010.
+                Your trusted partner in premium nuts, seeds, and dried berries since 2025.
               </p>
 
               {/* Stats Grid */}
@@ -72,7 +72,7 @@ export default function AboutPage() {
             <div className="md:hidden space-y-4 mb-12">
               <AccordionSection title="Our Mission" icon={<Target className="w-5 h-5" />} defaultOpen>
                 <p className="text-gray-600 leading-relaxed">
-                  To provide the highest quality nuts, seeds, and dried berries to B2B clients worldwide while
+                  To provide the highest quality nuts, seeds, and dried berries to B2B clients Nationwide while
                   maintaining sustainable practices and building lasting partnerships.
                 </p>
               </AccordionSection>
@@ -103,11 +103,11 @@ export default function AboutPage() {
                 </ul>
               </AccordionSection>
 
-              <AccordionSection title="Our Global Reach" icon={<Globe className="w-5 h-5" />}>
-               <p className="text-gray-600 leading-relaxed mb-3">
-                  We serve clients across India with regional offices in:
-                </p>
-                <div className="grid grid-cols-1 gap-3 text-sm">
+              {/* <AccordionSection title="Our Nationwide Reach" icon={<Globe className="w-5 h-5" />} >
+              <p className="text-gray-600 leading-relaxed mb-3">
+                We serve clients across India with regional offices in:
+              </p>
+<div className="grid grid-cols-1 gap-3 text-sm">
                   <div className="bg-white p-3 rounded-lg border border-gray-200">
                     <div className="font-medium text-gray-900">North India</div>
                     <div className="text-gray-600">Delhi</div>
@@ -120,8 +120,8 @@ export default function AboutPage() {
                     <div className="font-medium text-gray-900">South India</div>
                     <div className="text-gray-600">Bengaluru</div>
                   </div>
-                </div>
-              </AccordionSection>
+</div>
+              </AccordionSection> */}
             </div>
 
             {/* Desktop Content */}
