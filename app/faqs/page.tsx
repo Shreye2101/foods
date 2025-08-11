@@ -16,10 +16,10 @@ const faqCategories = [
     bgColor: "bg-blue-50",
     faqs: [
       {
-        question: "What types of certifications do your products have?",
-        answer:
-          "Our products come with various certifications including HACCP, ISO 22000, Organic (USDA/EU), Non-GMO, Kosher, and Halal certifications. Specific certifications vary by product and can be provided upon request.",
-      },
+        question: "What are your standards for food quality and safety?",
+        answer:
+          "We are committed to the highest standards of quality and safety. Our products are made using premium ingredients and are subject to rigorous testing to ensure they meet strict internal quality guidelines and customer expectations.",
+      },
       {
         question: "How do you ensure product quality and freshness?",
         answer:
@@ -104,11 +104,11 @@ const faqCategories = [
         answer:
           "We have a comprehensive quality complaint process: immediate investigation, product replacement or credit, root cause analysis, and preventive measures implementation.",
       },
-      {
-        question: "Do you provide Certificates of Analysis (COA)?",
-        answer:
-          "Yes, we provide detailed COAs for all shipments including nutritional analysis, microbiological testing, pesticide residue testing, and other relevant quality parameters.",
-      },
+      // {
+      //   question: "Do you provide Certificates of Analysis (COA)?",
+      //   answer:
+      //     "Yes, we provide detailed COAs for all shipments including nutritional analysis, microbiological testing, pesticide residue testing, and other relevant quality parameters.",
+      // },
       {
         question: "Are your facilities audited?",
         answer:

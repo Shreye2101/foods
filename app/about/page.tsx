@@ -21,8 +21,8 @@ const values = [
   },
   {
     icon: Globe,
-    title: "Global Reach",
-    description: "Serving clients across 50+ countries with reliable logistics and consistent supply chains.",
+    title: "Nationwide Reach",
+    description: "Serving clients across the Nation with reliable logistics and consistent supply chains.",
   },
   {
     icon: Users,
@@ -98,29 +98,29 @@ export default function AboutPage() {
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-[#93e33d] rounded-full mr-3"></span>
-                    Global logistics and delivery
+                    Nationwide logistics and delivery
                   </li>
                 </ul>
               </AccordionSection>
 
               <AccordionSection title="Our Global Reach" icon={<Globe className="w-5 h-5" />}>
-                <p className="text-gray-600 leading-relaxed mb-3">
-                  We serve clients across 50+ countries with regional offices in:
-                </p>
-                <div className="grid grid-cols-1 gap-3 text-sm">
-                  <div className="bg-white p-3 rounded-lg border border-gray-200">
-                    <div className="font-medium text-gray-900">North America</div>
-                    <div className="text-gray-600">New York, USA</div>
-                  </div>
-                  <div className="bg-white p-3 rounded-lg border border-gray-200">
-                    <div className="font-medium text-gray-900">Europe</div>
-                    <div className="text-gray-600">London, UK</div>
-                  </div>
-                  <div className="bg-white p-3 rounded-lg border border-gray-200">
-                    <div className="font-medium text-gray-900">Asia Pacific</div>
-                    <div className="text-gray-600">Singapore</div>
-                  </div>
-                </div>
+               <p className="text-gray-600 leading-relaxed mb-3">
+                  We serve clients across India with regional offices in:
+                </p>
+                <div className="grid grid-cols-1 gap-3 text-sm">
+                  <div className="bg-white p-3 rounded-lg border border-gray-200">
+                    <div className="font-medium text-gray-900">North India</div>
+                    <div className="text-gray-600">Delhi</div>
+                  </div>
+                  <div className="bg-white p-3 rounded-lg border border-gray-200">
+                    <div className="font-medium text-gray-900">West India</div>
+                    <div className="text-gray-600">Mumbai</div>
+                  </div>
+                  <div className="bg-white p-3 rounded-lg border border-gray-200">
+                    <div className="font-medium text-gray-900">South India</div>
+                    <div className="text-gray-600">Bengaluru</div>
+                  </div>
+                </div>
               </AccordionSection>
             </div>
 
@@ -179,7 +179,7 @@ export default function AboutPage() {
                   </div>
                   <div className="bg-white rounded-xl p-6 text-center">
                     <Shield className="w-16 h-16 text-[#093257] mx-auto mb-4" />
-                    <div className="text-2xl font-bold text-[#093257]">ISO 22000</div>
+                    <div className="text-2xl font-bold text-[#093257]">Quality Approved</div>
                     <div className="text-gray-600">Certified</div>
                   </div>
                 </div>

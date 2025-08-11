@@ -14,7 +14,7 @@ const communicationChannels = [
   {
     icon: Phone,
     name: "Call Us",
-    detail: "+91 810-942-9996",
+    detail: "+91 8109429996",
     description: "Mon-Fri 9AM-6PM IST",
     href: "tel:+918109429996",
     color: "from-blue-500 to-blue-600",
@@ -34,7 +34,7 @@ const communicationChannels = [
   {
     icon: MessageCircle,
     name: "WhatsApp",
-    detail: "+91 810-942-9996",
+    detail: "+91 8109429996",
     description: "Quick messaging",
     href: "https://wa.me/918109429996",
     color: "from-emerald-500 to-emerald-600",
@@ -62,15 +62,15 @@ const communicationChannels = [
     hoverColor: "hover:bg-pink-100",
   },
   {
-    icon: MapPin,
-    name: "Visit Us",
-    detail: "Noida, Uttar Pradesh",
-    description: "India",
-    href: "#",
-    color: "from-orange-500 to-red-600",
-    bgColor: "bg-orange-50",
-    hoverColor: "hover:bg-orange-100",
-  },
+    icon: MapPin,
+    name: "Visit Us",
+    detail: "Noida, Uttar Pradesh",
+    description: "India",
+    href: "https://www.google.com/maps/place/Evertruth+Foods/@28.5835979,77.319028,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce5d989f66b69:0x22879a811d739c3e!8m2!3d28.5835979!4d77.319028!16s%2Fg%2F11b6d76r1d?entry=ttu",
+    color: "from-orange-500 to-red-600",
+    bgColor: "bg-orange-50",
+    hoverColor: "hover:bg-orange-100",
+}
 ]
 
 export default function ContactPage() {
